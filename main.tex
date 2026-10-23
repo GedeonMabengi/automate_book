@@ -1,0 +1,406 @@
+\documentclass[12pt,a4paper]{book}
+
+% Encodage et langue
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Mise en page
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+% Tableaux et listes
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+% Maths et symboles
+\usepackage{amsmath,amssymb}
+
+% Liens
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\begin{document}
+
+\tableofcontents
+\chapter{Introduction aux systèmes automatisés}
+
+% =========================================================
+\section{Notion d'automatisme}
+
+\subsection{Introduction}
+
+Dans les installations électriques et mécaniques, certaines opérations doivent être réalisées plusieurs fois, rapidement et avec précision.
+
+Prenons quelques exemples :
+
+\begin{itemize}
+    \item allumer automatiquement une lampe lorsqu'il fait sombre ;
+    \item démarrer une pompe lorsque le niveau d'eau devient trop bas ;
+    \item arrêter un moteur lorsqu'une pièce arrive en fin de course ;
+    \item ouvrir automatiquement une porte lorsqu'une personne s'approche ;
+    \item déplacer des produits sur un convoyeur ;
+    \item remplir automatiquement une bouteille dans une usine.
+\end{itemize}
+
+Ces opérations peuvent être réalisées manuellement par une personne. Mais elles peuvent également être exécutées automatiquement grâce à un automatisme.
+
+\subsection{Définition}
+
+Un automatisme est un ensemble de techniques permettant à une machine ou à une installation d'exécuter une ou plusieurs opérations sans intervention humaine permanente, selon des conditions et des règles préalablement définies.
+
+L'automatisme permet donc à une machine de réagir elle-même aux informations qu'elle reçoit.
+
+\paragraph{Exemple :}
+Considérons un réservoir d'eau équipé d'une pompe.
+
+Lorsque le niveau d'eau devient trop bas :
+
+\[
+\text{Niveau bas} \rightarrow \text{détection} \rightarrow \text{commande} \rightarrow \text{démarrage de la pompe}
+\]
+
+Lorsque le réservoir est plein :
+
+\[
+\text{Niveau haut} \rightarrow \text{détection} \rightarrow \text{commande} \rightarrow \text{arrêt de la pompe}
+\]
+
+L'opérateur n'est donc pas obligé de surveiller continuellement le réservoir.
+
+\subsection{Commande manuelle et commande automatique}
+
+Dans une commande manuelle, l'être humain intervient directement pour provoquer l'action.
+
+\paragraph{Exemple :} pour allumer une lampe, une personne appuie sur un interrupteur.
+
+\[
+\text{Personne} \rightarrow \text{interrupteur} \rightarrow \text{lampe}
+\]
+
+Dans une commande automatique, une information provenant du système provoque l'action sans intervention permanente de l'opérateur.
+
+\paragraph{Exemple :} un détecteur de luminosité peut commander automatiquement une lampe lorsqu'il fait sombre.
+
+\[
+\text{Obscurité} \rightarrow \text{capteur} \rightarrow \text{système de commande} \rightarrow \text{lampe}
+\]
+
+La principale différence est donc la suivante :
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{Commande manuelle} & \textbf{Commande automatique} \\
+\hline
+Nécessite l'intervention de l'opérateur & Fonctionne avec peu ou sans intervention permanente \\
+\hline
+L'homme prend directement la décision & Le système applique une logique de commande \\
+\hline
+Exemple : interrupteur d'une lampe & Exemple : éclairage automatique \\
+\hline
+Adaptée aux opérations simples & Adaptée aux opérations répétitives ou complexes \\
+\hline
+\end{tabularx}
+\caption{Comparaison entre commande manuelle et commande automatique}
+\end{table}
+
+\subsection{Automatisme câblé}
+
+Dans un automatisme câblé, le fonctionnement du système est déterminé principalement par la manière dont les composants électriques sont câblés entre eux.
+
+On utilise notamment :
+
+\begin{itemize}
+    \item des boutons-poussoirs ;
+    \item des relais ;
+    \item des contacteurs ;
+    \item des temporisateurs ;
+    \item des fins de course.
+\end{itemize}
+
+\paragraph{Exemple : commande d'un moteur}
+
+\[
+\text{Bouton Marche} \rightarrow \text{contacteur} \rightarrow \text{moteur}
+\]
+
+Un circuit auxiliaire peut maintenir le contacteur alimenté après le relâchement du bouton Marche. C'est le principe de l'auto-maintien.
+
+Pour modifier profondément le fonctionnement d'un automatisme câblé, il faut souvent modifier son câblage.
+
+\subsection{Automatisme programmé}
+
+Dans un automatisme programmé, une partie importante de la logique de fonctionnement est enregistrée sous forme de programme dans un dispositif électronique.
+
+Dans l'industrie, on utilise notamment l'automate programmable industriel (API), appelé PLC en anglais.
+
+Le principe général est :
+
+\[
+\text{Entrées} \rightarrow \text{API} \rightarrow \text{Sorties}
+\]
+
+Par exemple :
+
+\[
+\text{Bouton Marche} \rightarrow \text{entrée API} \rightarrow \text{programme} \rightarrow \text{sortie API} \rightarrow \text{contacteur} \rightarrow \text{moteur}
+\]
+
+Le programme détermine alors dans quelles conditions le moteur doit démarrer ou s'arrêter.
+
+\subsection{Exemple pratique}
+
+Une entreprise possède un convoyeur destiné à transporter des cartons.
+
+Un capteur détecte l'arrivée d'un carton. L'information est envoyée à l'automate. Celui-ci traite l'information selon son programme et commande le moteur du convoyeur.
+
+On obtient :
+
+\[
+\text{Capteur} \rightarrow \text{API} \rightarrow \text{contacteur} \rightarrow \text{moteur} \rightarrow \text{convoyeur}
+\]
+
+Nous pouvons déjà distinguer trois opérations fondamentales :
+
+\[
+\text{Détecter} \rightarrow \text{Traiter} \rightarrow \text{Agir}
+\]
+
+Cette logique sera très importante pour comprendre le fonctionnement d'un système automatisé.
+
+\subsection{Importance de l'automatisme}
+
+L'automatisation peut permettre :
+
+\begin{itemize}
+    \item d'effectuer des opérations répétitives ;
+    \item d'améliorer la régularité et la précision de certaines opérations ;
+    \item d'augmenter la cadence de production ;
+    \item de surveiller certaines grandeurs automatiquement ;
+    \item de réduire certaines interventions manuelles ;
+    \item d'améliorer la sécurité lorsqu'elle est correctement conçue ;
+    \item de commander plusieurs équipements selon une séquence précise.
+\end{itemize}
+
+L'automatisme est aujourd'hui utilisé dans de nombreux domaines : industrie, bâtiments, traitement de l'eau, énergie, transport, mines, agriculture et autres installations techniques.
+
+\subsubsection*{À retenir}
+
+\begin{quote}
+Un automatisme permet à une machine ou à une installation d'effectuer des opérations selon des règles déterminées, sans intervention humaine permanente.
+\end{quote}
+
+% =========================================================
+\section{Définition d'un système automatisé}
+
+\subsection{Définition}
+
+Un système automatisé est un ensemble organisé de composants matériels et, éventuellement, logiciels permettant d'effectuer automatiquement une tâche ou une suite de tâches selon des conditions déterminées.
+
+Il peut recevoir des informations provenant de son environnement, les traiter puis commander différents équipements.
+
+Son fonctionnement général peut être représenté par :
+
+\[
+\text{Informations} \rightarrow \text{Traitement} \rightarrow \text{Actions}
+\]
+
+Ou plus concrètement :
+
+\[
+\text{Capteurs} \rightarrow \text{Système de commande} \rightarrow \text{Actionneurs}
+\]
+
+\subsection{Exemple simple : réservoir d'eau}
+
+Considérons un réservoir équipé :
+
+\begin{itemize}
+    \item d'un capteur de niveau bas ;
+    \item d'un capteur de niveau haut ;
+    \item d'un automate programmable ;
+    \item d'un contacteur ;
+    \item d'une pompe électrique.
+\end{itemize}
+
+Lorsque le niveau devient bas, le capteur transmet l'information à l'automate.
+
+L'automate commande alors le contacteur qui alimente la pompe.
+
+Lorsque l'eau atteint le niveau supérieur, le deuxième capteur transmet cette nouvelle information et l'automate arrête la pompe.
+
+Le fonctionnement peut être résumé ainsi :
+
+\[
+\text{Niveau bas} \rightarrow \text{Capteur} \rightarrow \text{API} \rightarrow \text{Contacteur} \rightarrow \text{Pompe démarre}
+\]
+
+puis :
+
+\[
+\text{Niveau haut} \rightarrow \text{Capteur} \rightarrow \text{API} \rightarrow \text{Contacteur} \rightarrow \text{Pompe s'arrête}
+\]
+
+\subsection{Les informations d'entrée}
+
+Pour savoir ce qui se passe dans l'installation, le système automatisé doit recevoir des informations d'entrée.
+
+Ces informations peuvent provenir de :
+
+\begin{itemize}
+    \item boutons-poussoirs ;
+    \item interrupteurs ;
+    \item fins de course ;
+    \item détecteurs de proximité ;
+    \item capteurs de niveau ;
+    \item capteurs de température ;
+    \item capteurs de pression ;
+    \item détecteurs photoélectriques, etc.
+\end{itemize}
+
+\paragraph{Exemple :}
+Un capteur détecte la présence d'une bouteille sur un convoyeur.
+
+Cette détection constitue une information d'entrée.
+
+\subsection{Traitement des informations}
+
+Les informations reçues doivent ensuite être traitées par le système de commande.
+
+Dans notre cours, nous nous intéresserons principalement à l'automate programmable industriel (API).
+
+L'API possède un programme qui lui indique comment réagir aux différentes situations.
+
+Prenons une règle simple :
+
+\begin{quote}
+SI le bouton Marche est activé ET qu'aucun défaut n'est présent, ALORS commander le moteur.
+\end{quote}
+
+Le programme de l'automate traduit cette règle en instructions exécutables.
+
+Nous étudierons plus tard comment réaliser cette logique avec le langage Ladder (LD).
+
+\subsection{Les sorties}
+
+Après avoir traité les informations, l'automate commande ses sorties.
+
+Celles-ci peuvent agir directement sur certains petits équipements ou, très souvent, commander des dispositifs intermédiaires qui pilotent les actionneurs.
+
+On peut rencontrer :
+
+\begin{itemize}
+    \item voyants ;
+    \item relais ;
+    \item contacteurs ;
+    \item électrovannes ;
+    \item avertisseurs sonores.
+\end{itemize}
+
+Les actionneurs réalisent l'action physique souhaitée, par exemple :
+
+\begin{itemize}
+    \item moteur électrique ;
+    \item vérin pneumatique ;
+    \item pompe ;
+    \item vanne motorisée.
+\end{itemize}
+
+\paragraph{Attention :} un moteur industriel de puissance n'est généralement pas alimenté directement par la sortie de l'API. L'API commande typiquement un contacteur ou un variateur, qui assure ensuite la commande électrique du moteur.
+
+\subsection{Exemple d'une porte automatique}
+
+Prenons une porte qui doit s'ouvrir lorsqu'une personne est détectée.
+
+\paragraph{Étape 1 --- Détection}
+
+Le capteur détecte une personne.
+
+\paragraph{Étape 2 --- Information}
+
+Le capteur transmet un signal au système de commande.
+
+\paragraph{Étape 3 --- Traitement}
+
+Le système vérifie les conditions prévues par sa logique.
+
+\paragraph{Étape 4 --- Commande}
+
+Il commande l'équipement chargé d'actionner la porte.
+
+\paragraph{Étape 5 --- Action}
+
+Le moteur entraîne le mécanisme et la porte s'ouvre.
+
+Nous retrouvons donc :
+
+\[
+\text{CAPTEUR} \rightarrow \text{TRAITEMENT} \rightarrow \text{COMMANDE} \rightarrow \text{ACTIONNEUR} \rightarrow \text{ACTION}
+\]
+
+\subsection{Système automatisé et opérateur humain}
+
+Un système automatisé ne signifie pas nécessairement que l'être humain disparaît complètement.
+
+L'opérateur peut toujours intervenir pour :
+
+\begin{itemize}
+    \item mettre l'installation en marche ;
+    \item sélectionner un mode de fonctionnement ;
+    \item arrêter la machine ;
+    \item surveiller son fonctionnement ;
+    \item acquitter certaines alarmes ;
+    \item effectuer la maintenance ;
+    \item intervenir en cas de panne.
+\end{itemize}
+
+L'automatisation consiste surtout à confier au système les opérations qui ont été prévues lors de sa conception.
+
+\subsection{Exemple industriel récapitulatif}
+
+Considérons une machine qui remplit automatiquement des bouteilles.
+
+La bouteille arrive devant le poste de remplissage.
+
+\[
+\text{Capteur de présence} \rightarrow \text{API} \rightarrow \text{électrovanne} \rightarrow \text{remplissage}
+\]
+
+Lorsque les conditions prévues sont satisfaites, l'automate commande l'ouverture de l'électrovanne. Après la quantité ou la durée prévue par la conception du système, l'électrovanne est refermée et la séquence peut continuer.
+
+Ce simple exemple contient déjà les principaux éléments que nous étudierons :
+
+\[
+\text{capteurs} + \text{automate} + \text{programme} + \text{sorties} + \text{actionneurs} + \text{machine}.
+\]
+
+\subsubsection*{À retenir}
+
+\begin{quote}
+Un système automatisé reçoit des informations, les traite selon une logique déterminée et commande des équipements afin de réaliser automatiquement une tâche.
+\end{quote}
+
+\paragraph{Schéma fondamental :}
+
+\[
+\text{ENTRÉES} \rightarrow \text{TRAITEMENT} \rightarrow \text{SORTIES}
+\]
+
+\[
+\text{Capteurs} \rightarrow \text{API} \rightarrow \text{Actionneurs}
+\]
+
+\include{Section3}
+\include{Section4}
+\include{Section5}
+\include{Section6}
+\include{Section1.2}
+\include{Section2.2}
+\include{Section 3.2}
+\end{document}

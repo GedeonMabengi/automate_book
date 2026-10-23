@@ -1,0 +1,244 @@
+% =========================================================
+\section{Boutons-poussoirs et commutateurs}
+
+\subsection{Introduction}
+
+Dans un système automatisé, l'opérateur doit pouvoir intervenir pour :
+
+\begin{itemize}
+    \item mettre l'installation en marche ;
+    \item arrêter la machine ;
+    \item choisir un mode de fonctionnement ;
+    \item signaler un défaut ou déclencher un arrêt d'urgence.
+\end{itemize}
+
+Les \textbf{boutons-poussoirs} et les \textbf{commutateurs} sont les organes de commande manuelle les plus utilisés dans les pupitres et armoires électriques.
+
+Ils appartiennent à la \textbf{chaîne d'information} et sont raccordés aux entrées de l'API.
+
+\subsection{Le bouton-poussoir}
+
+\subsubsection{Définition}
+
+Un bouton-poussoir est un organe de commande manuelle qui modifie l'état d'un contact lorsqu'on appuie dessus.
+
+Il revient généralement à sa position initiale dès que l'opérateur relâche le bouton.
+
+\subsubsection{Symbole}
+
+Le symbole normalisé d'un bouton-poussoir est le suivant :
+
+\begin{itemize}
+    \item bouton à contact \textbf{NO} : contact ouvert au repos, fermé lorsqu'on appuie ;
+    \item bouton à contact \textbf{NC} : contact fermé au repos, ouvert lorsqu'on appuie.
+\end{itemize}
+
+\subsubsection{Types de boutons-poussoirs}
+
+On distingue :
+
+\begin{itemize}
+    \item le bouton \textbf{à contact NO} (Normalement Ouvert) ;
+    \item le bouton \textbf{à contact NC} (Normalement Fermé) ;
+    \item le bouton \textbf{à contacts NO + NC} (double contact) ;
+    \item le bouton \textbf{à verrouillage} (reste enfoncé) ;
+    \item le bouton \textbf{à clé} (commande protégée).
+\end{itemize}
+
+\subsection{Bouton à contact NO}
+
+\subsubsection{Principe}
+
+Un bouton à contact NO est ouvert au repos. Lorsqu'on appuie dessus, le contact se ferme et laisse passer le signal.
+
+\[
+\text{Repos} \rightarrow \text{Contact ouvert}
+\qquad
+\text{Appui} \rightarrow \text{Contact fermé}
+\]
+
+\subsubsection{Utilisation}
+
+Il est utilisé pour les commandes de type \textbf{Marche}, \textbf{Départ cycle} ou \textbf{Acquittement}.
+
+\paragraph{Exemple :} bouton « Marche » sur un pupitre de commande.
+
+\subsection{Bouton à contact NC}
+
+\subsubsection{Principe}
+
+Un bouton à contact NC est fermé au repos. Lorsqu'on appuie dessus, le contact s'ouvre et interrompt le signal.
+
+\[
+\text{Repos} \rightarrow \text{Contact fermé}
+\qquad
+\text{Appui} \rightarrow \text{Contact ouvert}
+\]
+
+\subsubsection{Utilisation}
+
+Il est utilisé pour les commandes de type \textbf{Arrêt} ou \textbf{Arrêt d'urgence}.
+
+\paragraph{Exemple :} bouton « Arrêt » sur un pupitre de commande.
+
+\paragraph{Important :} en cas de rupture de fil, un contact NC ouvre le circuit et provoque l'arrêt. C'est un principe de sécurité fondamental.
+
+\subsection{Bouton d'arrêt d'urgence}
+
+\subsubsection{Définition}
+
+Le bouton d'arrêt d'urgence est un bouton à contact NC, généralement à \textbf{verrouillage mécanique}. Il reste enfoncé après l'appui et doit être déverrouillé manuellement (par rotation ou traction) avant de pouvoir redémarrer.
+
+\subsubsection{Couleur}
+
+Selon la norme, il est :
+
+\begin{itemize}
+    \item de couleur \textbf{rouge} ;
+    \item sur fond \textbf{jaune}.
+\end{itemize}
+
+\subsubsection{Rôle}
+
+Il a pour fonction d'arrêter immédiatement et en toute sécurité l'installation en cas de danger.
+
+\paragraph{Attention :} l'arrêt d'urgence doit agir directement sur la chaîne d'énergie ou via un relais de sécurité, et non uniquement par le programme de l'API.
+
+\subsection{Les commutateurs et sélecteurs}
+
+\subsubsection{Définition}
+
+Un commutateur ou sélecteur possède plusieurs positions \textbf{stables}. Il conserve son état après l'action de l'opérateur, contrairement au bouton-poussoir qui revient à sa position initiale.
+
+\subsubsection{Exemples d'utilisation}
+
+\begin{itemize}
+    \item sélecteur « Manuel / Automatique » ;
+    \item sélecteur « Marche / Arrêt » ;
+    \item sélecteur de vitesse ;
+    \item commutateur de mode de cycle.
+\end{itemize}
+
+\paragraph{Exemple :} un sélecteur à deux positions qui reste en position « Automatique » jusqu'à ce que l'opérateur le tourne vers « Manuel ».
+
+\subsection{Différence entre bouton-poussoir et commutateur}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{Bouton-poussoir} & \textbf{Commutateur / sélecteur} \\
+\hline
+Retour automatique au repos & Conserve sa position \\
+\hline
+Action momentanée & Action permanente \\
+\hline
+Utilisé pour Marche, Arrêt, AU & Utilisé pour choix de mode \\
+\hline
+Un ou deux contacts & Plusieurs positions possibles \\
+\hline
+\end{tabularx}
+\caption{Comparaison bouton-poussoir / commutateur}
+\end{table}
+
+\subsection{Contacts NO et NC : rappel}
+
+\begin{itemize}
+    \item \textbf{NO} : ouvert au repos, fermé lorsqu'on actionne ;
+    \item \textbf{NC} : fermé au repos, ouvert lorsqu'on actionne.
+\end{itemize}
+
+\paragraph{Règle importante :} pour la sécurité, on utilise toujours des contacts \textbf{NC} pour les arrêts et les arrêts d'urgence.
+
+\subsection{Raccordement à l'API}
+
+Les boutons et commutateurs sont raccordés aux entrées \textbf{TOR} de l'API.
+
+\paragraph{Exemple :}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|c|X|c|}
+\hline
+\textbf{Adresse} & \textbf{Organe} & \textbf{Type de contact} \\
+\hline
+I0.0 & Bouton Marche & NO \\
+\hline
+I0.1 & Bouton Arrêt & NC \\
+\hline
+I0.2 & Bouton Arrêt d'urgence & NC verrouillé \\
+\hline
+I0.3 & Sélecteur Manuel/Auto & NO \\
+\hline
+I0.4 & Sélecteur Auto & NO \\
+\hline
+\end{tabularx}
+\caption{Exemple de raccordement de boutons et sélecteurs}
+\end{table}
+
+\subsection{Exemple d'application : démarrage d'un moteur}
+
+On souhaite démarrer un moteur à l'aide de deux boutons :
+
+\begin{itemize}
+    \item un bouton \textbf{Marche} (NO) ;
+    \item un bouton \textbf{Arrêt} (NC).
+\end{itemize}
+
+Le programme de l'API doit :
+
+\begin{itemize}
+    \item démarrer le moteur lorsque le bouton Marche est appuyé ;
+    \item maintenir le moteur en marche après relâchement (auto-maintien logiciel) ;
+    \item arrêter le moteur lorsque le bouton Arrêt est appuyé.
+\end{itemize}
+
+\[
+\text{Marche (NO)} \rightarrow \text{API} \rightarrow \text{Moteur}
+\]
+
+\[
+\text{Arrêt (NC)} \rightarrow \text{API} \rightarrow \text{Arrêt du moteur}
+\]
+
+\subsection{Bonnes pratiques}
+
+\begin{itemize}
+    \item Repérer clairement chaque bouton sur le pupitre ;
+    \item Utiliser des couleurs normalisées (vert pour Marche, rouge pour Arrêt) ;
+    \item Utiliser un contact NC pour tout arrêt ou arrêt d'urgence ;
+    \item Vérifier le fonctionnement du bouton avant le raccordement ;
+    \item Noter soigneusement les adresses dans le tableau des entrées ;
+    \item Éviter de cumuler plusieurs fonctions sur un même bouton.
+\end{itemize}
+
+\subsection{Erreurs fréquentes à éviter}
+
+\begin{itemize}
+    \item Confondre NO et NC ;
+    \item Utiliser un bouton NO pour un arrêt d'urgence ;
+    \item Raccorder un bouton sur une entrée déjà utilisée ;
+    \item Oublier de respecter la tension d'alimentation du bouton ;
+    \item Ne pas tester le bouton après câblage ;
+    \item Ne pas distinguer bouton momentané et bouton verrouillé.
+\end{itemize}
+
+\subsection{Conclusion}
+
+Les boutons-poussoirs et les commutateurs sont les organes de commande manuelle de base dans un système automatisé.
+
+Ils permettent à l'opérateur d'agir sur la partie commande : mise en marche, arrêt, choix de mode, acquittement, arrêt d'urgence.
+
+Leur raccordement correct aux entrées de l'API, ainsi que le respect des règles de sécurité, sont essentiels pour la fiabilité et la sécurité de l'installation.
+
+\subsubsection*{À retenir}
+
+\begin{quote}
+Un bouton-poussoir est un organe momentané, tandis qu'un commutateur conserve sa position. Les contacts NO sont utilisés pour les commandes, les contacts NC pour les arrêts et les sécurités.
+\end{quote}
+
+\paragraph{Schéma fondamental :}
+
+\[
+\text{Boutons / commutateurs} \rightarrow \text{Entrées API} \rightarrow \text{Programme}
+\]

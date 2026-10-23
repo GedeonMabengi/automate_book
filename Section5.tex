@@ -1,0 +1,237 @@
+% =========================================================
+\section{Partie commande et partie opérative}
+
+\subsection{Introduction}
+
+Dans un système automatisé, la \textbf{partie opérative} (PO) exécute les actions physiques, tandis que la \textbf{partie commande} (PC) décide de ces actions à partir des informations reçues.
+
+Cette séparation est fondamentale : elle permet de distinguer clairement ce qui \textbf{décide} de ce qui \textbf{agit}.
+
+\subsection{La partie opérative (PO)}
+
+\subsubsection{Définition}
+
+La partie opérative est l'ensemble des composants qui réalisent physiquement le travail sur la matière d'œuvre, sous l'ordre de la partie commande.
+
+Elle agit sur la matière, la déplace, la transforme, la mesure ou la contrôle.
+
+\subsubsection{Composants de la partie opérative}
+
+On distingue généralement :
+
+\begin{itemize}
+    \item les \textbf{actionneurs} : moteurs, vérins, électroaimants ;
+    \item les \textbf{préactionneurs} : contacteurs, relais, distributeurs, variateurs ;
+    \item les \textbf{effecteurs} : outils, pinces, buses, tapis ;
+    \item les \textbf{capteurs} : fins de course, détecteurs de proximité, capteurs de niveau ;
+    \item les \textbf{organes de transmission} : arbres, courroies, engrenages, tuyaux.
+\end{itemize}
+
+\subsubsection{Rôle de la partie opérative}
+
+La PO a pour fonction de :
+
+\begin{itemize}
+    \item recevoir les ordres de la PC ;
+    \item convertir une énergie (électrique, pneumatique, hydraulique) en action mécanique ;
+    \item agir sur la matière d'œuvre ;
+    \item informer la PC de son état par l'intermédiaire des capteurs.
+\end{itemize}
+
+\paragraph{Exemple :} dans une porte automatique, la PO comprend le moteur, le réducteur, le bras mécanique et les capteurs de présence.
+
+\subsection{La partie commande (PC)}
+
+\subsubsection{Définition}
+
+La partie commande est l'ensemble des composants qui traitent les informations et élaborent les ordres destinés à la partie opérative.
+
+Elle constitue le « cerveau » du système automatisé.
+
+\subsubsection{Composants de la partie commande}
+
+Selon le type d'automatisme, la PC peut être réalisée par :
+
+\begin{itemize}
+    \item des \textbf{relais} et \textbf{contacteurs} (automatisme câblé) ;
+    \item un \textbf{automate programmable industriel (API)} ;
+    \item un \textbf{microcontrôleur} ou un calculateur industriel ;
+    \item des \textbf{modules logiques} programmables.
+\end{itemize}
+
+\subsubsection{Rôle de la partie commande}
+
+La PC a pour fonction de :
+
+\begin{itemize}
+    \item acquérir les informations d'entrée ;
+    \item traiter ces informations selon une logique définie ;
+    \item élaborer les ordres de sortie ;
+    \item transmettre ces ordres à la PO ;
+    \item gérer les sécurités, les alarmes et les modes de fonctionnement.
+\end{itemize}
+
+\paragraph{Exemple :} dans une porte automatique, la PC est un API qui reçoit l'information du capteur de présence et commande le moteur d'ouverture.
+
+\subsection{Dialogue entre PC et PO}
+
+La PC et la PO communiquent en permanence par deux flux d'informations :
+
+\begin{itemize}
+    \item la PC envoie des \textbf{ordres} à la PO ;
+    \item la PO renvoie des \textbf{comptes rendus} à la PC.
+\end{itemize}
+
+On peut représenter ce dialogue par :
+
+\[
+\text{PC} \xrightarrow{\text{ordres}} \text{PO}
+\qquad \text{et} \qquad
+\text{PO} \xrightarrow{\text{comptes rendus}} \text{PC}
+\]
+
+\paragraph{Exemple :}
+
+\begin{itemize}
+    \item Ordre : « démarrer le moteur du convoyeur ».
+    \item Compte rendu : « le convoyeur est en marche » ou « le carton est détecté ».
+\end{itemize}
+
+\subsection{Les informations échangées}
+
+\subsubsection{Les ordres}
+
+Les ordres sont élaborés par la PC. Ils peuvent être :
+
+\begin{itemize}
+    \item \textbf{TOR} (Tout Ou Rien) : marcher/arrêter, ouvrir/fermer ;
+    \item \textbf{analogiques} : consigne de vitesse, de position, de température ;
+    \item \textbf{numériques} : envoi d'un code, d'un compteur, d'une recette.
+\end{itemize}
+
+\subsubsection{Les comptes rendus}
+
+Les comptes rendus sont fournis par les capteurs de la PO. Ils peuvent être :
+
+\begin{itemize}
+    \item \textbf{TOR} : présence, absence, fin de course ;
+    \item \textbf{analogiques} : niveau, pression, température, débit ;
+    \item \textbf{numériques} : position d'un codeur, comptage.
+\end{itemize}
+
+\subsection{Exemple complet : remplissage de cuve}
+
+Considérons une cuve à remplir automatiquement.
+
+\paragraph{Partie opérative :}
+\begin{itemize}
+    \item électrovanne de remplissage ;
+    \item pompe d'alimentation ;
+    \item capteurs de niveau bas et haut ;
+    \item cuve.
+\end{itemize}
+
+\paragraph{Partie commande :}
+\begin{itemize}
+    \item API.
+\end{itemize}
+
+\paragraph{Dialogue :}
+
+\[
+\text{Niveau bas détecté} \rightarrow \text{API} \rightarrow \text{Ordre d'ouverture de l'électrovanne}
+\]
+
+\[
+\text{Niveau haut détecté} \rightarrow \text{API} \rightarrow \text{Ordre de fermeture de l'électrovanne}
+\]
+
+\paragraph{Analyse :}
+\begin{itemize}
+    \item Le capteur de niveau bas est un \textbf{compte rendu} envoyé par la PO.
+    \item L'API élabore un \textbf{ordre} d'ouverture ou de fermeture.
+    \item L'électrovanne est un \textbf{actionneur} de la PO.
+\end{itemize}
+
+\subsection{Exemple complet : convoyeur}
+
+\paragraph{Partie opérative :}
+\begin{itemize}
+    \item moteur du convoyeur ;
+    \item tapis ;
+    \item capteur de présence de carton ;
+    \item contacteur.
+\end{itemize}
+
+\paragraph{Partie commande :}
+\begin{itemize}
+    \item API.
+\end{itemize}
+
+\paragraph{Dialogue :}
+
+\[
+\text{Carton détecté} \rightarrow \text{API} \rightarrow \text{Contacteur} \rightarrow \text{Moteur}
+\]
+
+\[
+\text{Fin de convoyage} \rightarrow \text{API} \rightarrow \text{Arrêt du moteur}
+\]
+
+\subsection{Place de l'IHM}
+
+L'IHM (Interface Homme-Machine) permet à l'opérateur de dialoguer avec la partie commande.
+
+Elle peut :
+
+\begin{itemize}
+    \item envoyer des ordres à la PC (marche, arrêt, choix de mode) ;
+    \item afficher les comptes rendus (états, alarmes, mesures) ;
+    \item visualiser le fonctionnement du système.
+\end{itemize}
+
+Elle est reliée à la PC et non directement à la PO.
+
+\subsection{Tableau récapitulatif}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{Partie commande (PC)} & \textbf{Partie opérative (PO)} \\
+\hline
+Traite les informations & Exécute les actions \\
+\hline
+API, relais, calculateur & Moteurs, vérins, contacteurs \\
+\hline
+Reçoit les comptes rendus & Fournit les comptes rendus \\
+\hline
+Élabore les ordres & Reçoit et exécute les ordres \\
+\hline
+Décide & Agit \\
+\hline
+\end{tabularx}
+\caption{Répartition des rôles entre PC et PO}
+\end{table}
+
+\subsection{Conclusion}
+
+La distinction entre partie commande et partie opérative est essentielle pour comprendre et concevoir un système automatisé.
+
+La PC \textbf{décide}, la PO \textbf{agit}. Elles communiquent par des ordres et des comptes rendus. L'IHM permet à l'opérateur d'intervenir sans agir directement sur la PO.
+
+\subsubsection*{À retenir}
+
+\begin{quote}
+La partie commande élabore les ordres à partir des informations reçues. La partie opérative exécute ces ordres sur la matière d'œuvre et renvoie des comptes rendus. L'IHM permet à l'opérateur de dialoguer avec la partie commande.
+\end{quote}
+
+\paragraph{Schéma fondamental :}
+
+\[
+\text{IHM} \rightarrow \text{Partie Commande} \rightarrow \text{Partie Opérative} \rightarrow \text{Matière d'œuvre}
+\]
+
+\[
+\text{Ordres} \ \downarrow \qquad \uparrow \ \text{Comptes rendus}
+\]

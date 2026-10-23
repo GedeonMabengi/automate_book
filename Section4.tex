@@ -1,0 +1,216 @@
+% =========================================================
+\section{Structure générale d'un système automatisé}
+
+\subsection{Introduction}
+
+Pour comprendre le fonctionnement d'un système automatisé, il ne suffit pas de connaître ses composants. Il faut aussi savoir comment ils sont organisés et comment ils échangent des informations.
+
+Un système automatisé est généralement structuré en deux grandes parties :
+
+\begin{itemize}
+    \item la \textbf{partie opérative} (PO), qui agit sur la matière d'œuvre ;
+    \item la \textbf{partie commande} (PC), qui élabore les ordres.
+\end{itemize}
+
+À cela s'ajoutent les interfaces de dialogue et les chaînes d'information et d'énergie qui relient les différents éléments.
+
+\subsection{Partie opérative et partie commande}
+
+\subsubsection{La partie opérative (PO)}
+
+La partie opérative est l'ensemble des éléments qui réalisent physiquement le travail sur la matière d'œuvre.
+
+Elle comprend notamment :
+
+\begin{itemize}
+    \item les \textbf{actionneurs} : moteurs, vérins, électrovannes, etc. ;
+    \item les \textbf{préactionneurs} : contacteurs, relais, distributeurs, variateurs ;
+    \item les \textbf{effecteurs} : outils, pinces, convoyeurs, etc. ;
+    \item les \textbf{capteurs} qui informent sur l'état de la PO (position, présence, niveau, etc.).
+\end{itemize}
+
+\paragraph{Exemple :} dans un convoyeur, la partie opérative comprend le moteur, le réducteur, le tapis et les capteurs de présence.
+
+\subsubsection{La partie commande (PC)}
+
+La partie commande est l'ensemble des éléments qui traitent les informations et élaborent les ordres destinés à la partie opérative.
+
+Elle peut être réalisée par :
+
+\begin{itemize}
+    \item des relais et contacteurs (automatisme câblé) ;
+    \item un automate programmable industriel (API) ;
+    \item un calculateur industriel ou un microcontrôleur.
+\end{itemize}
+
+La partie commande reçoit les informations des capteurs, applique la logique du programme et commande les sorties.
+
+\subsubsection{Relation entre PO et PC}
+
+La partie commande et la partie opérative échangent en permanence :
+
+\begin{itemize}
+    \item la PC envoie des \textbf{ordres} à la PO ;
+    \item la PO renvoie des \textbf{comptes rendus} à la PC.
+\end{itemize}
+
+On peut représenter cet échange par :
+
+\[
+\text{PC} \xrightarrow{\text{ordres}} \text{PO}
+\qquad \text{et} \qquad
+\text{PO} \xrightarrow{\text{comptes rendus}} \text{PC}
+\]
+
+\subsection{Chaîne d'information et chaîne d'énergie}
+
+Dans un système automatisé, on distingue souvent deux chaînes fonctionnelles.
+
+\subsubsection{La chaîne d'information}
+
+Elle concerne l'acquisition, le traitement et la communication des informations.
+
+Ses éléments principaux sont :
+
+\begin{itemize}
+    \item \textbf{Acquérir} : capteurs, boutons, détecteurs ;
+    \item \textbf{Traiter} : API, relais, calculateur ;
+    \item \textbf{Communiquer} : interfaces, réseaux industriels, IHM.
+\end{itemize}
+
+\paragraph{Exemple :} un capteur de niveau envoie une information à l'API. L'API la traite et affiche l'état sur une IHM.
+
+\subsubsection{La chaîne d'énergie}
+
+Elle concerne l'alimentation, la distribution et la conversion de l'énergie nécessaire aux actionneurs.
+
+Ses éléments principaux sont :
+
+\begin{itemize}
+    \item \textbf{Alimenter} : réseau électrique, air comprimé, hydraulique ;
+    \item \textbf{Distribuer} : contacteurs, disjoncteurs, distributeurs ;
+    \item \textbf{Convertir} : moteurs, vérins, résistances ;
+    \item \textbf{Transmettre} : arbres, courroies, engrenages, tuyaux.
+\end{itemize}
+
+\paragraph{Exemple :} le réseau électrique alimente un contacteur qui alimente un moteur. Le moteur convertit l'énergie électrique en énergie mécanique.
+
+\subsection{Schéma général d'un système automatisé}
+
+On peut représenter la structure générale de la manière suivante :
+
+\[
+\begin{array}{c}
+\text{Opérateur} \\
+\downarrow \\
+\text{IHM / Pupitre} \\
+\downarrow \\
+\text{Partie Commande (API)} \\
+\swarrow \qquad \searrow \\
+\text{Ordres} \qquad \text{Comptes rendus} \\
+\downarrow \qquad \uparrow \\
+\text{Partie Opérative} \\
+\downarrow \\
+\text{Action sur la matière d'œuvre}
+\end{array}
+\]
+
+Une autre représentation simplifiée est :
+
+\[
+\text{Capteurs} \rightarrow \text{Partie Commande} \rightarrow \text{Actionneurs}
+\]
+
+\[
+\text{Chaîne d'information} \qquad \text{Chaîne d'énergie}
+\]
+
+\subsection{Exemple : réservoir d'eau}
+
+Reprenons l'exemple du réservoir d'eau.
+
+\begin{itemize}
+    \item \textbf{Partie opérative} : pompe, contacteur, réservoir, capteurs de niveau.
+    \item \textbf{Partie commande} : API.
+    \item \textbf{Chaîne d'information} : capteurs de niveau $\rightarrow$ API.
+    \item \textbf{Chaîne d'énergie} : API $\rightarrow$ contacteur $\rightarrow$ pompe.
+\end{itemize}
+
+Le cycle est le suivant :
+
+\[
+\text{Niveau bas} \rightarrow \text{Capteur} \rightarrow \text{API} \rightarrow \text{Contacteur} \rightarrow \text{Pompe}
+\]
+
+\[
+\text{Niveau haut} \rightarrow \text{Capteur} \rightarrow \text{API} \rightarrow \text{Contacteur} \rightarrow \text{Arrêt pompe}
+\]
+
+\subsection{Exemple : convoyeur}
+
+\begin{itemize}
+    \item \textbf{Partie opérative} : moteur, tapis, capteur de présence.
+    \item \textbf{Partie commande} : API.
+    \item \textbf{Chaîne d'information} : capteur $\rightarrow$ API.
+    \item \textbf{Chaîne d'énergie} : API $\rightarrow$ contacteur $\rightarrow$ moteur.
+\end{itemize}
+
+\[
+\text{Carton détecté} \rightarrow \text{API} \rightarrow \text{Contacteur} \rightarrow \text{Moteur} \rightarrow \text{Convoyeur avance}
+\]
+
+\subsection{Place de l'opérateur}
+
+L'opérateur n'est pas exclu du système. Il intervient par l'intermédiaire d'une interface homme-machine (IHM) ou d'un pupitre.
+
+Il peut :
+
+\begin{itemize}
+    \item mettre en marche ou arrêter l'installation ;
+    \item choisir un mode de fonctionnement ;
+    \item acquitter les alarmes ;
+    \item surveiller les paramètres ;
+    \item intervenir en maintenance.
+\end{itemize}
+
+\subsection{Tableau récapitulatif}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{Partie commande (PC)} & \textbf{Partie opérative (PO)} \\
+\hline
+Traite les informations & Agit sur la matière d'œuvre \\
+\hline
+API, relais, calculateur & Moteurs, vérins, contacteurs \\
+\hline
+Reçoit les comptes rendus & Reçoit les ordres \\
+\hline
+Élabore les ordres & Exécute les actions \\
+\hline
+\end{tabularx}
+\caption{Répartition des rôles entre PC et PO}
+\end{table}
+
+\subsection{Conclusion}
+
+La structure d'un système automatisé repose sur une séparation claire entre la partie commande et la partie opérative. Les informations circulent dans la chaîne d'information, tandis que l'énergie est distribuée dans la chaîne d'énergie.
+
+Cette organisation permet de comprendre comment un API peut commander une machine, tout en restant en relation avec les capteurs, les actionneurs et l'opérateur.
+
+\subsubsection*{À retenir}
+
+\begin{quote}
+Un système automatisé comprend une partie commande qui traite les informations et une partie opérative qui exécute les actions. Les deux communiquent par des ordres et des comptes rendus.
+\end{quote}
+
+\paragraph{Schéma fondamental :}
+
+\[
+\text{Capteurs} \rightarrow \text{Partie Commande} \rightarrow \text{Actionneurs}
+\]
+
+\[
+\text{Chaîne d'information} \qquad \text{Chaîne d'énergie}
+\]

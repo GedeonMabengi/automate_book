@@ -1,0 +1,300 @@
+% =========================================================
+\section{Capteurs, détecteurs et fins de course}
+
+\subsection{Introduction}
+
+Dans un système automatisé, la partie commande doit connaître à tout moment l'état de la partie opérative et de son environnement.
+
+Pour cela, elle utilise des \textbf{capteurs} et des \textbf{détecteurs}, qui traduisent une information physique en un signal exploitable par l'API.
+
+Parmi ces organes, les \textbf{fins de course} occupent une place importante : ils indiquent la position extrême d'un organe mobile.
+
+\subsection{Définition d'un capteur}
+
+Un capteur est un composant qui prélève une information sur une grandeur physique (position, présence, niveau, température, pression, etc.) et la transforme en un signal électrique exploitable par la partie commande.
+
+\[
+\text{Grandeur physique} \rightarrow \text{Capteur} \rightarrow \text{Signal électrique} \rightarrow \text{API}
+\]
+
+\subsection{Classification des capteurs}
+
+On peut classer les capteurs selon plusieurs critères.
+
+\subsubsection{Selon le type de signal}
+
+\begin{itemize}
+    \item \textbf{Capteurs TOR} (Tout Ou Rien) : délivrent un signal 0 ou 1 ;
+    \item \textbf{Capteurs analogiques} : délivrent un signal proportionnel à la grandeur mesurée (0--10 V, 4--20 mA) ;
+    \item \textbf{Capteurs numériques} : délivrent un code (binaire, Gray, BCD).
+\end{itemize}
+
+\subsubsection{selon le mode de détection}
+
+\begin{itemize}
+    \item \textbf{Avec contact} : fin de course mécanique ;
+    \item \textbf{Sans contact} : détecteurs de proximité, photoélectriques, ultrasoniques.
+\end{itemize}
+
+\subsubsection{Selon la nature de la grandeur}
+
+\begin{itemize}
+    \item Détection de présence ou de position ;
+    \item Mesure de niveau ;
+    \item Mesure de température ;
+    \item Mesure de pression ;
+    \item Mesure de débit ;
+    \item Mesure de vitesse ou de position angulaire.
+\end{itemize}
+
+\subsection{Les fins de course}
+
+\subsubsection{Définition}
+
+Un fin de course est un capteur mécanique qui détecte la position extrême d'un organe mobile (vérin, porte, tiroir, etc.).
+
+Il est généralement équipé d'un contact \textbf{NO} ou \textbf{NC} et d'un levier ou d'un galet actionné par l'organe en mouvement.
+
+\subsubsection{Principe de fonctionnement}
+
+Lorsque l'organe mobile arrive en fin de course, il appuie sur le levier du fin de course, ce qui ouvre ou ferme le contact.
+
+\[
+\text{Organe mobile en butée} \rightarrow \text{Action sur le levier} \rightarrow \text{Contact ouvert ou fermé}
+\]
+
+\subsubsection{Types de fins de course}
+
+\begin{itemize}
+    \item Fin de course \textbf{à levier} ;
+    \item Fin de course \textbf{à galet} ;
+    \item Fin de course \textbf{à tige} ;
+    \item Fin de course \textbf{à billes}.
+\end{itemize}
+
+\subsubsection{Utilisation}
+
+Les fins de course servent à :
+
+\begin{itemize}
+    \item détecter la position d'un vérin (sorti/rentré) ;
+    \item limiter la course d'un organe mobile ;
+    \item arrêter un moteur en fin de course ;
+    \item confirmer une position avant d'autoriser l'étape suivante d'un cycle.
+\end{itemize}
+
+\paragraph{Exemple :} dans un vérin pneumatique, deux fins de course indiquent respectivement la position \textbf{rentrée} et la position \textbf{sortie}.
+
+\subsection{Les détecteurs de proximité}
+
+\subsubsection{Définition}
+
+Un détecteur de proximité est un capteur \textbf{sans contact} qui détecte la présence d'un objet à faible distance.
+
+\subsubsection{Détecteur inductif}
+
+Il détecte uniquement les objets \textbf{métalliques}.
+
+\paragraph{Principe :} il crée un champ magnétique alternatif et détecte la perturbation provoquée par un objet métallique qui s'approche.
+
+\paragraph{Avantages :}
+\begin{itemize}
+    \item pas d'usure mécanique ;
+    \item cadence élevée ;
+    \item insensible à la poussière et à l'humidité.
+\end{itemize}
+
+\paragraph{Utilisation :} détection de cames, de pignons, de pièces métalliques.
+
+\subsubsection{Détecteur capacitif}
+
+Il détecte les objets \textbf{conducteurs ou isolants} (plastique, verre, bois, liquides).
+
+\paragraph{Principe :} il détecte la variation de capacité provoquée par l'approche d'un objet.
+
+\paragraph{Utilisation :} détection de niveau de liquide à travers une paroi, détection de pièces plastiques.
+
+\subsubsection{Détecteur photoélectrique}
+
+Il utilise un \textbf{faisceau lumineux} (infrarouge ou visible) pour détecter un objet.
+
+Trois modes existent :
+
+\begin{itemize}
+    \item \textbf{Barrage} : émetteur et récepteur séparés ; l'objet coupe le faisceau.
+    \item \textbf{Réflex} : émetteur et récepteur dans le même boîtier, avec un réflecteur ; l'objet coupe le faisceau.
+    \item \textbf{Proximité} : l'objet lui-même renvoie le faisceau vers le récepteur.
+\end{itemize}
+
+\paragraph{Utilisation :} détection de pièces, comptage, sécurité (barrière immatérielle).
+
+\subsubsection{Détecteur à ultrasons}
+
+Il émet des ondes ultrasonores et mesure le temps de retour de l'écho.
+
+\paragraph{Utilisation :} détection d'objets transparents, mesure de distance, détection de niveau.
+
+\subsection{Les capteurs de grandeur physique}
+
+\subsubsection{Capteurs de niveau}
+
+Ils détectent ou mesurent le niveau d'un liquide ou d'un solide dans un réservoir.
+
+\begin{itemize}
+    \item \textbf{Niveau TOR} : flotteur, électrode, détecteur capacitif ;
+    \item \textbf{Niveau analogique} : capteur de pression, ultrasons, radar.
+\end{itemize}
+
+\subsubsection{Capteurs de température}
+
+\begin{itemize}
+    \item \textbf{Thermocouple} : mesure de hautes températures ;
+    \item \textbf{Sonde PT100} : mesure précise et linéaire ;
+    \item \textbf{Thermistance} : mesure économique.
+\end{itemize}
+
+\subsubsection{Capteurs de pression}
+
+Ils mesurent la pression d'un fluide (air, eau, huile).
+
+\subsubsection{Codeurs}
+
+Un codeur est un capteur qui mesure une position angulaire ou une vitesse de rotation.
+
+\begin{itemize}
+    \item \textbf{Codeur incrémental} : délivre des impulsions ; il faut un comptage ;
+    \item \textbf{Codeur absolu} : délivre directement la position sous forme de code.
+\end{itemize}
+
+\subsection{Caractéristiques d'un capteur}
+
+Pour choisir un capteur, on tient compte de :
+
+\begin{itemize}
+    \item la \textbf{grandeur} à détecter ;
+    \item le \textbf{type de signal} de sortie (TOR, analogique, numérique) ;
+    \item la \textbf{distance de détection} ;
+    \item la \textbf{cadence} de fonctionnement ;
+    \item la \textbf{tension d'alimentation} (24 V DC, 230 V AC) ;
+    \item le \textbf{type de sortie} (PNP, NPN, contact sec) ;
+    \item l'\textbf{environnement} (poussière, humidité, température, vibrations) ;
+    \item l'\textbf{indice de protection} (IP).
+\end{itemize}
+
+\subsection{Sorties PNP et NPN}
+
+Les détecteurs de proximité électroniques possèdent souvent une sortie à transistor.
+
+\begin{itemize}
+    \item \textbf{Sortie PNP} : le transistor relie la sortie au \textbf{+24 V} lorsqu'il est actif ;
+    \item \textbf{Sortie NPN} : le transistor relie la sortie au \textbf{0 V} lorsqu'il est actif.
+\end{itemize}
+
+\paragraph{Attention :} il faut respecter le type de sortie attendu par l'entrée de l'API. Un capteur PNP ne se raccorde pas comme un capteur NPN.
+
+\subsection{Raccordement à l'API}
+
+Les capteurs et détecteurs sont raccordés aux entrées de l'API.
+
+\paragraph{Exemple de tableau des entrées :}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|c|X|c|c|}
+\hline
+\textbf{Adresse} & \textbf{Organe} & \textbf{Type} & \textbf{Sortie} \\
+\hline
+I0.0 & Fin de course vérin rentré & TOR & Contact NC \\
+\hline
+I0.1 & Fin de course vérin sorti & TOR & Contact NO \\
+\hline
+I0.2 & Détecteur inductif pièce & TOR & PNP \\
+\hline
+I0.3 & Détecteur photoélectrique & TOR & PNP \\
+\hline
+I0.4 & Capteur de niveau bas & TOR & Contact NO \\
+\hline
+IW64 & Capteur de pression & Analogique & 4--20 mA \\
+\hline
+\end{tabularx}
+\caption{Exemple de raccordement de capteurs}
+\end{table}
+
+\subsection{Exemple d'application : détection de position d'un vérin}
+
+Un vérin pneumatique doit être commandé en va-et-vient.
+
+Deux capteurs de position sont installés :
+
+\begin{itemize}
+    \item un capteur \textbf{vérin rentré} (fin de course) ;
+    \item un capteur \textbf{vérin sorti} (fin de course).
+\end{itemize}
+
+Le programme de l'API utilise ces informations pour :
+
+\begin{itemize}
+    \item autoriser la sortie du vérin uniquement lorsqu'il est rentré ;
+    \item autoriser la rentrée uniquement lorsqu'il est sorti.
+\end{itemize}
+
+\[
+\text{Vérin rentré} \rightarrow \text{API} \rightarrow \text{Commande sortie}
+\]
+
+\[
+\text{Vérin sorti} \rightarrow \text{API} \rightarrow \text{Commande rentrée}
+\]
+
+\subsection{Exemple d'application : comptage de pièces}
+
+Un détecteur photoélectrique détecte le passage de pièces sur un convoyeur.
+
+Chaque détection est comptée par l'API. Lorsque le compteur atteint une valeur déterminée, l'API arrête le convoyeur ou déclenche une alarme.
+
+\[
+\text{Impulsion détecteur} \rightarrow \text{Compteur API} \rightarrow \text{Action}
+\]
+
+\subsection{Bonnes pratiques}
+
+\begin{itemize}
+    \item Vérifier la compatibilité PNP/NPN avec l'API ;
+    \item Respecter la tension d'alimentation du capteur ;
+    \item Éviter les environnements trop perturbés (vibrations, poussière) ;
+    \item Repérer clairement chaque capteur sur le schéma ;
+    \item Utiliser un contact NC pour les sécurités ;
+    \item Tester chaque capteur avant raccordement ;
+    \item Protéger les câbles contre les perturbations électromagnétiques.
+\end{itemize}
+
+\subsection{Erreurs fréquentes à éviter}
+
+\begin{itemize}
+    \item Confondre capteur PNP et NPN ;
+    \item Utiliser un capteur inductif pour détecter du plastique ;
+    \item Dépasser la distance de détection nominale ;
+    \item Négliger l'indice de protection dans un environnement humide ;
+    \item Mal régler la sensibilité d'un détecteur photoélectrique ;
+    \item Ne pas tenir compte du temps de réponse du capteur.
+\end{itemize}
+
+\subsection{Conclusion}
+
+Les capteurs, détecteurs et fins de course sont les organes qui informent la partie commande sur l'état du système.
+
+Leur choix dépend de la grandeur à détecter, du type de signal, de l'environnement et du type de sortie attendu par l'API.
+
+Un bon raccordement et un repérage rigoureux sont essentiels pour la fiabilité du système automatisé.
+
+\subsubsection*{À retenir}
+
+\begin{quote}
+Un capteur transforme une grandeur physique en signal exploitable par l'API. Un fin de course détecte la position extrême d'un organe mobile. Un détecteur de proximité fonctionne sans contact.
+\end{quote}
+
+\paragraph{Schéma fondamental :}
+
+\[
+\text{Grandeur physique} \rightarrow \text{Capteur} \rightarrow \text{Signal} \rightarrow \text{Entrée API}
+\]

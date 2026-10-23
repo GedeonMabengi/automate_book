@@ -1,0 +1,231 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction aux systèmes automatisés}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Notion d'automatisme}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Introduction}{5}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Définition}{5}{subsection.1.1.2}%
+\contentsline {paragraph}{Exemple :}{5}{section*.2}%
+\contentsline {subsection}{\numberline {1.1.3}Commande manuelle et commande automatique}{6}{subsection.1.1.3}%
+\contentsline {paragraph}{Exemple :}{6}{section*.3}%
+\contentsline {paragraph}{Exemple :}{6}{section*.4}%
+\contentsline {subsection}{\numberline {1.1.4}Automatisme câblé}{6}{subsection.1.1.4}%
+\contentsline {paragraph}{Exemple : commande d'un moteur}{6}{section*.5}%
+\contentsline {subsection}{\numberline {1.1.5}Automatisme programmé}{7}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Exemple pratique}{7}{subsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.1.7}Importance de l'automatisme}{7}{subsection.1.1.7}%
+\contentsline {section}{\numberline {1.2}Définition d'un système automatisé}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Définition}{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Exemple simple : réservoir d'eau}{8}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Les informations d'entrée}{9}{subsection.1.2.3}%
+\contentsline {paragraph}{Exemple :}{9}{section*.7}%
+\contentsline {subsection}{\numberline {1.2.4}Traitement des informations}{9}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Les sorties}{9}{subsection.1.2.5}%
+\contentsline {paragraph}{Attention :}{10}{section*.8}%
+\contentsline {subsection}{\numberline {1.2.6}Exemple d'une porte automatique}{10}{subsection.1.2.6}%
+\contentsline {paragraph}{Étape 1 --- Détection}{10}{section*.9}%
+\contentsline {paragraph}{Étape 2 --- Information}{10}{section*.10}%
+\contentsline {paragraph}{Étape 3 --- Traitement}{10}{section*.11}%
+\contentsline {paragraph}{Étape 4 --- Commande}{10}{section*.12}%
+\contentsline {paragraph}{Étape 5 --- Action}{10}{section*.13}%
+\contentsline {subsection}{\numberline {1.2.7}Système automatisé et opérateur humain}{10}{subsection.1.2.7}%
+\contentsline {subsection}{\numberline {1.2.8}Exemple industriel récapitulatif}{10}{subsection.1.2.8}%
+\contentsline {paragraph}{Schéma fondamental :}{11}{section*.15}%
+\contentsline {section}{\numberline {1.3}Objectifs de l'automatisation}{12}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Introduction}{12}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Pourquoi automatiser ?}{12}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Objectifs techniques}{12}{subsection.1.3.3}%
+\contentsline {paragraph}{Exemple :}{12}{section*.16}%
+\contentsline {subsection}{\numberline {1.3.4}Objectifs économiques}{12}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}Objectifs liés à la sécurité et aux conditions de travail}{13}{subsection.1.3.5}%
+\contentsline {paragraph}{Attention :}{13}{section*.17}%
+\contentsline {subsection}{\numberline {1.3.6}Objectifs de qualité et de traçabilité}{13}{subsection.1.3.6}%
+\contentsline {subsection}{\numberline {1.3.7}Objectifs de flexibilité}{13}{subsection.1.3.7}%
+\contentsline {subsection}{\numberline {1.3.8}Exemples industriels}{14}{subsection.1.3.8}%
+\contentsline {subsection}{\numberline {1.3.9}Avantages et limites de l'automatisation}{14}{subsection.1.3.9}%
+\contentsline {subsection}{\numberline {1.3.10}Conclusion}{14}{subsection.1.3.10}%
+\contentsline {paragraph}{Schéma fondamental :}{14}{section*.19}%
+\contentsline {section}{\numberline {1.4}Structure générale d'un système automatisé}{15}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Introduction}{15}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Partie opérative et partie commande}{15}{subsection.1.4.2}%
+\contentsline {subsubsection}{La partie opérative (PO)}{15}{section*.20}%
+\contentsline {paragraph}{Exemple :}{15}{section*.21}%
+\contentsline {subsubsection}{La partie commande (PC)}{15}{section*.22}%
+\contentsline {subsubsection}{Relation entre PO et PC}{15}{section*.23}%
+\contentsline {subsection}{\numberline {1.4.3}Chaîne d'information et chaîne d'énergie}{16}{subsection.1.4.3}%
+\contentsline {subsubsection}{La chaîne d'information}{16}{section*.24}%
+\contentsline {paragraph}{Exemple :}{16}{section*.25}%
+\contentsline {subsubsection}{La chaîne d'énergie}{16}{section*.26}%
+\contentsline {paragraph}{Exemple :}{16}{section*.27}%
+\contentsline {subsection}{\numberline {1.4.4}Schéma général d'un système automatisé}{16}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Exemple : réservoir d'eau}{17}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.6}Exemple : convoyeur}{17}{subsection.1.4.6}%
+\contentsline {subsection}{\numberline {1.4.7}Place de l'opérateur}{17}{subsection.1.4.7}%
+\contentsline {subsection}{\numberline {1.4.8}Tableau récapitulatif}{17}{subsection.1.4.8}%
+\contentsline {subsection}{\numberline {1.4.9}Conclusion}{18}{subsection.1.4.9}%
+\contentsline {paragraph}{Schéma fondamental :}{18}{section*.29}%
+\contentsline {section}{\numberline {1.5}Partie commande et partie opérative}{19}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Introduction}{19}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}La partie opérative (PO)}{19}{subsection.1.5.2}%
+\contentsline {subsubsection}{Définition}{19}{section*.30}%
+\contentsline {subsubsection}{Composants de la partie opérative}{19}{section*.31}%
+\contentsline {subsubsection}{Rôle de la partie opérative}{19}{section*.32}%
+\contentsline {paragraph}{Exemple :}{19}{section*.33}%
+\contentsline {subsection}{\numberline {1.5.3}La partie commande (PC)}{19}{subsection.1.5.3}%
+\contentsline {subsubsection}{Définition}{19}{section*.34}%
+\contentsline {subsubsection}{Composants de la partie commande}{20}{section*.35}%
+\contentsline {subsubsection}{Rôle de la partie commande}{20}{section*.36}%
+\contentsline {paragraph}{Exemple :}{20}{section*.37}%
+\contentsline {subsection}{\numberline {1.5.4}Dialogue entre PC et PO}{20}{subsection.1.5.4}%
+\contentsline {paragraph}{Exemple :}{20}{section*.38}%
+\contentsline {subsection}{\numberline {1.5.5}Les informations échangées}{20}{subsection.1.5.5}%
+\contentsline {subsubsection}{Les ordres}{20}{section*.39}%
+\contentsline {subsubsection}{Les comptes rendus}{21}{section*.40}%
+\contentsline {subsection}{\numberline {1.5.6}Exemple complet : remplissage de cuve}{21}{subsection.1.5.6}%
+\contentsline {paragraph}{Partie opérative :}{21}{section*.41}%
+\contentsline {paragraph}{Partie commande :}{21}{section*.42}%
+\contentsline {paragraph}{Dialogue :}{21}{section*.43}%
+\contentsline {paragraph}{Analyse :}{21}{section*.44}%
+\contentsline {subsection}{\numberline {1.5.7}Exemple complet : convoyeur}{21}{subsection.1.5.7}%
+\contentsline {paragraph}{Partie opérative :}{21}{section*.45}%
+\contentsline {paragraph}{Partie commande :}{21}{section*.46}%
+\contentsline {paragraph}{Dialogue :}{22}{section*.47}%
+\contentsline {subsection}{\numberline {1.5.8}Place de l'IHM}{22}{subsection.1.5.8}%
+\contentsline {subsection}{\numberline {1.5.9}Tableau récapitulatif}{22}{subsection.1.5.9}%
+\contentsline {subsection}{\numberline {1.5.10}Conclusion}{22}{subsection.1.5.10}%
+\contentsline {paragraph}{Schéma fondamental :}{22}{section*.49}%
+\contentsline {section}{\numberline {1.6}Chaîne d'information et chaîne d'énergie}{23}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Introduction}{23}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}La chaîne d'information}{23}{subsection.1.6.2}%
+\contentsline {subsubsection}{Définition}{23}{section*.50}%
+\contentsline {subsubsection}{Fonctions de la chaîne d'information}{23}{section*.51}%
+\contentsline {subsubsection}{Éléments de la chaîne d'information}{23}{section*.52}%
+\contentsline {paragraph}{Exemple :}{23}{section*.53}%
+\contentsline {subsection}{\numberline {1.6.3}La chaîne d'énergie}{23}{subsection.1.6.3}%
+\contentsline {subsubsection}{Définition}{23}{section*.54}%
+\contentsline {subsubsection}{Fonctions de la chaîne d'énergie}{24}{section*.55}%
+\contentsline {subsubsection}{Éléments de la chaîne d'énergie}{24}{section*.56}%
+\contentsline {paragraph}{Exemple :}{24}{section*.57}%
+\contentsline {subsection}{\numberline {1.6.4}Comparaison entre les deux chaînes}{24}{subsection.1.6.4}%
+\contentsline {subsection}{\numberline {1.6.5}Relation entre les deux chaînes}{24}{subsection.1.6.5}%
+\contentsline {subsection}{\numberline {1.6.6}Représentation graphique}{25}{subsection.1.6.6}%
+\contentsline {subsection}{\numberline {1.6.7}Exemple : réservoir d'eau}{25}{subsection.1.6.7}%
+\contentsline {paragraph}{Chaîne d'information :}{25}{section*.58}%
+\contentsline {paragraph}{Chaîne d'énergie :}{25}{section*.59}%
+\contentsline {paragraph}{Fonctionnement :}{25}{section*.60}%
+\contentsline {subsection}{\numberline {1.6.8}Exemple : convoyeur}{26}{subsection.1.6.8}%
+\contentsline {paragraph}{Chaîne d'information :}{26}{section*.61}%
+\contentsline {paragraph}{Chaîne d'énergie :}{26}{section*.62}%
+\contentsline {paragraph}{Fonctionnement :}{26}{section*.63}%
+\contentsline {subsection}{\numberline {1.6.9}Exemple : porte automatique}{26}{subsection.1.6.9}%
+\contentsline {paragraph}{Chaîne d'information :}{26}{section*.64}%
+\contentsline {paragraph}{Chaîne d'énergie :}{26}{section*.65}%
+\contentsline {paragraph}{Fonctionnement :}{26}{section*.66}%
+\contentsline {subsection}{\numberline {1.6.10}Importance de cette distinction}{26}{subsection.1.6.10}%
+\contentsline {paragraph}{Attention :}{26}{section*.67}%
+\contentsline {subsection}{\numberline {1.6.11}Conclusion}{27}{subsection.1.6.11}%
+\contentsline {paragraph}{Schéma fondamental :}{27}{section*.69}%
+\contentsline {chapter}{\numberline {2}Éléments d'un système automatisé}{29}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Organes d'entrée}{29}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Introduction}{29}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Définition}{29}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Rôle des organes d'entrée}{29}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Classification des organes d'entrée}{29}{subsection.2.1.4}%
+\contentsline {subsubsection}{Organes de commande manuelle}{30}{section*.70}%
+\contentsline {subsubsection}{Capteurs de position et de présence}{30}{section*.71}%
+\contentsline {subsubsection}{Capteurs de grandeur physique}{30}{section*.72}%
+\contentsline {subsubsection}{Organes de sécurité}{30}{section*.73}%
+\contentsline {subsection}{\numberline {2.1.5}Les boutons-poussoirs}{30}{subsection.2.1.5}%
+\contentsline {paragraph}{Exemple :}{31}{section*.74}%
+\contentsline {subsection}{\numberline {2.1.6}Les interrupteurs et commutateurs}{31}{subsection.2.1.6}%
+\contentsline {paragraph}{Exemple :}{31}{section*.75}%
+\contentsline {subsection}{\numberline {2.1.7}Les capteurs et détecteurs}{31}{subsection.2.1.7}%
+\contentsline {subsubsection}{Fin de course}{31}{section*.76}%
+\contentsline {paragraph}{Exemple :}{31}{section*.77}%
+\contentsline {subsubsection}{Détecteur de proximité inductif}{31}{section*.78}%
+\contentsline {paragraph}{Avantages :}{31}{section*.79}%
+\contentsline {subsubsection}{Détecteur de proximité capacitif}{31}{section*.80}%
+\contentsline {subsubsection}{Détecteur photoélectrique}{31}{section*.81}%
+\contentsline {subsubsection}{Capteurs de grandeur physique}{31}{section*.82}%
+\contentsline {paragraph}{Exemples :}{32}{section*.83}%
+\contentsline {subsection}{\numberline {2.1.8}Caractéristiques d'un organe d'entrée}{32}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.9}Raccordement des organes d'entrée à l'API}{32}{subsection.2.1.9}%
+\contentsline {paragraph}{Exemple :}{32}{table.2.1}%
+\contentsline {subsection}{\numberline {2.1.10}Exemple d'application : remplissage de cuve}{32}{subsection.2.1.10}%
+\contentsline {subsection}{\numberline {2.1.11}Erreurs fréquentes à éviter}{33}{subsection.2.1.11}%
+\contentsline {subsection}{\numberline {2.1.12}Conclusion}{33}{subsection.2.1.12}%
+\contentsline {paragraph}{Schéma fondamental :}{33}{section*.86}%
+\contentsline {section}{\numberline {2.2}Boutons-poussoirs et commutateurs}{34}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Introduction}{34}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Le bouton-poussoir}{34}{subsection.2.2.2}%
+\contentsline {subsubsection}{Définition}{34}{section*.87}%
+\contentsline {subsubsection}{Symbole}{34}{section*.88}%
+\contentsline {subsubsection}{Types de boutons-poussoirs}{34}{section*.89}%
+\contentsline {subsection}{\numberline {2.2.3}Bouton à contact NO}{34}{subsection.2.2.3}%
+\contentsline {subsubsection}{Principe}{34}{section*.90}%
+\contentsline {subsubsection}{Utilisation}{34}{section*.91}%
+\contentsline {paragraph}{Exemple :}{35}{section*.92}%
+\contentsline {subsection}{\numberline {2.2.4}Bouton à contact NC}{35}{subsection.2.2.4}%
+\contentsline {subsubsection}{Principe}{35}{section*.93}%
+\contentsline {subsubsection}{Utilisation}{35}{section*.94}%
+\contentsline {paragraph}{Exemple :}{35}{section*.95}%
+\contentsline {paragraph}{Important :}{35}{section*.96}%
+\contentsline {subsection}{\numberline {2.2.5}Bouton d'arrêt d'urgence}{35}{subsection.2.2.5}%
+\contentsline {subsubsection}{Définition}{35}{section*.97}%
+\contentsline {subsubsection}{Couleur}{35}{section*.98}%
+\contentsline {subsubsection}{Rôle}{35}{section*.99}%
+\contentsline {paragraph}{Attention :}{35}{section*.100}%
+\contentsline {subsection}{\numberline {2.2.6}Les commutateurs et sélecteurs}{35}{subsection.2.2.6}%
+\contentsline {subsubsection}{Définition}{35}{section*.101}%
+\contentsline {subsubsection}{Exemples d'utilisation}{36}{section*.102}%
+\contentsline {paragraph}{Exemple :}{36}{section*.103}%
+\contentsline {subsection}{\numberline {2.2.7}Différence entre bouton-poussoir et commutateur}{36}{subsection.2.2.7}%
+\contentsline {subsection}{\numberline {2.2.8}Contacts NO et NC : rappel}{36}{subsection.2.2.8}%
+\contentsline {paragraph}{Règle importante :}{36}{section*.104}%
+\contentsline {subsection}{\numberline {2.2.9}Raccordement à l'API}{36}{subsection.2.2.9}%
+\contentsline {paragraph}{Exemple :}{36}{table.2.3}%
+\contentsline {subsection}{\numberline {2.2.10}Exemple d'application : démarrage d'un moteur}{37}{subsection.2.2.10}%
+\contentsline {subsection}{\numberline {2.2.11}Bonnes pratiques}{37}{subsection.2.2.11}%
+\contentsline {subsection}{\numberline {2.2.12}Erreurs fréquentes à éviter}{37}{subsection.2.2.12}%
+\contentsline {subsection}{\numberline {2.2.13}Conclusion}{37}{subsection.2.2.13}%
+\contentsline {paragraph}{Schéma fondamental :}{38}{section*.107}%
+\contentsline {section}{\numberline {2.3}Capteurs, détecteurs et fins de course}{39}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Introduction}{39}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Définition d'un capteur}{39}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Classification des capteurs}{39}{subsection.2.3.3}%
+\contentsline {subsubsection}{Selon le type de signal}{39}{section*.108}%
+\contentsline {subsubsection}{selon le mode de détection}{39}{section*.109}%
+\contentsline {subsubsection}{Selon la nature de la grandeur}{39}{section*.110}%
+\contentsline {subsection}{\numberline {2.3.4}Les fins de course}{40}{subsection.2.3.4}%
+\contentsline {subsubsection}{Définition}{40}{section*.111}%
+\contentsline {subsubsection}{Principe de fonctionnement}{40}{section*.112}%
+\contentsline {subsubsection}{Types de fins de course}{40}{section*.113}%
+\contentsline {subsubsection}{Utilisation}{40}{section*.114}%
+\contentsline {paragraph}{Exemple :}{40}{section*.115}%
+\contentsline {subsection}{\numberline {2.3.5}Les détecteurs de proximité}{40}{subsection.2.3.5}%
+\contentsline {subsubsection}{Définition}{40}{section*.116}%
+\contentsline {subsubsection}{Détecteur inductif}{40}{section*.117}%
+\contentsline {paragraph}{Principe :}{40}{section*.118}%
+\contentsline {paragraph}{Avantages :}{41}{section*.119}%
+\contentsline {paragraph}{Utilisation :}{41}{section*.120}%
+\contentsline {subsubsection}{Détecteur capacitif}{41}{section*.121}%
+\contentsline {paragraph}{Principe :}{41}{section*.122}%
+\contentsline {paragraph}{Utilisation :}{41}{section*.123}%
+\contentsline {subsubsection}{Détecteur photoélectrique}{41}{section*.124}%
+\contentsline {paragraph}{Utilisation :}{41}{section*.125}%
+\contentsline {subsubsection}{Détecteur à ultrasons}{41}{section*.126}%
+\contentsline {paragraph}{Utilisation :}{41}{section*.127}%
+\contentsline {subsection}{\numberline {2.3.6}Les capteurs de grandeur physique}{41}{subsection.2.3.6}%
+\contentsline {subsubsection}{Capteurs de niveau}{41}{section*.128}%
+\contentsline {subsubsection}{Capteurs de température}{41}{section*.129}%
+\contentsline {subsubsection}{Capteurs de pression}{42}{section*.130}%
+\contentsline {subsubsection}{Codeurs}{42}{section*.131}%
+\contentsline {subsection}{\numberline {2.3.7}Caractéristiques d'un capteur}{42}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.8}Sorties PNP et NPN}{42}{subsection.2.3.8}%
+\contentsline {paragraph}{Attention :}{42}{section*.132}%
+\contentsline {subsection}{\numberline {2.3.9}Raccordement à l'API}{42}{subsection.2.3.9}%
+\contentsline {paragraph}{Exemple de tableau des entrées :}{42}{table.2.4}%
+\contentsline {subsection}{\numberline {2.3.10}Exemple d'application : détection de position d'un vérin}{43}{subsection.2.3.10}%
+\contentsline {subsection}{\numberline {2.3.11}Exemple d'application : comptage de pièces}{43}{subsection.2.3.11}%
+\contentsline {subsection}{\numberline {2.3.12}Bonnes pratiques}{43}{subsection.2.3.12}%
+\contentsline {subsection}{\numberline {2.3.13}Erreurs fréquentes à éviter}{43}{subsection.2.3.13}%
+\contentsline {subsection}{\numberline {2.3.14}Conclusion}{44}{subsection.2.3.14}%
+\contentsline {paragraph}{Schéma fondamental :}{44}{section*.135}%

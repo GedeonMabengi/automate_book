@@ -1,0 +1,254 @@
+% =========================================================
+\chapter{Éléments d'un système automatisé}
+
+\section{Organes d'entrée}
+
+\subsection{Introduction}
+
+Pour fonctionner correctement, un système automatisé doit d'abord \textbf{savoir ce qui se passe} dans son environnement et dans sa partie opérative.
+
+Les \textbf{organes d'entrée} sont les composants qui fournissent ces informations à la partie commande. Ils constituent le premier maillon de la chaîne d'information.
+
+Sans organes d'entrée, l'API ne peut ni détecter une situation, ni décider d'une action.
+
+\subsection{Définition}
+
+Un organe d'entrée est un composant qui transforme une information physique (position, présence, niveau, température, pression, etc.) en un signal exploitable par la partie commande.
+
+Ce signal peut être :
+
+\begin{itemize}
+    \item \textbf{TOR} (Tout Ou Rien) : présence/absence, ouvert/fermé ;
+    \item \textbf{analogique} : tension ou courant proportionnel à une grandeur ;
+    \item \textbf{numérique} : code transmis sous forme de mots binaires.
+\end{itemize}
+
+\subsection{Rôle des organes d'entrée}
+
+Les organes d'entrée ont pour fonction de :
+
+\begin{itemize}
+    \item détecter un état ou un événement ;
+    \item transmettre cette information à la partie commande ;
+    \item permettre à l'API de décider de l'action à exécuter ;
+    \item renseigner l'opérateur sur l'état du système.
+\end{itemize}
+
+Ils constituent les \textbf{yeux} et les \textbf{oreilles} du système automatisé.
+
+\subsection{Classification des organes d'entrée}
+
+On peut classer les organes d'entrée en plusieurs catégories.
+
+\subsubsection{Organes de commande manuelle}
+
+Ils sont actionnés par l'opérateur.
+
+\begin{itemize}
+    \item Boutons-poussoirs (Marche, Arrêt, Arrêt d'urgence) ;
+    \item Interrupteurs et commutateurs ;
+    \item Sélecteurs (mode manuel / automatique) ;
+    \item Boutons rotatifs ou à clé.
+\end{itemize}
+
+\subsubsection{Capteurs de position et de présence}
+
+Ils détectent la présence ou la position d'un objet ou d'un organe.
+
+\begin{itemize}
+    \item Fins de course mécaniques ;
+    \item Détecteurs de proximité inductifs ;
+    \item Détecteurs de proximité capacitifs ;
+    \item Détecteurs photoélectriques ;
+    \item Détecteurs à ultrasons.
+\end{itemize}
+
+\subsubsection{Capteurs de grandeur physique}
+
+Ils mesurent une grandeur continue.
+
+\begin{itemize}
+    \item Capteurs de niveau ;
+    \item Capteurs de température ;
+    \item Capteurs de pression ;
+    \item Capteurs de débit ;
+    \item Capteurs de position analogiques ;
+    \item Codeurs.
+\end{itemize}
+
+\subsubsection{Organes de sécurité}
+
+Ils assurent la protection des personnes et des machines.
+
+\begin{itemize}
+    \item Boutons d'arrêt d'urgence ;
+    \item Barrières immatérielles ;
+    \item Capteurs de porte ;
+    \item Relais de sécurité.
+\end{itemize}
+
+\subsection{Les boutons-poussoirs}
+
+Un bouton-poussoir est un organe de commande manuelle qui ferme ou ouvre un contact lorsqu'on appuie dessus.
+
+On distingue :
+
+\begin{itemize}
+    \item \textbf{bouton à contact NO} (Normalement Ouvert) : le contact se ferme quand on appuie ;
+    \item \textbf{bouton à contact NC} (Normalement Fermé) : le contact s'ouvre quand on appuie.
+\end{itemize}
+
+\paragraph{Exemple :}
+
+\begin{itemize}
+    \item Bouton \textbf{Marche} : contact NO ;
+    \item Bouton \textbf{Arrêt} : contact NC ;
+    \item Bouton \textbf{Arrêt d'urgence} : contact NC à verrouillage.
+\end{itemize}
+
+\subsection{Les interrupteurs et commutateurs}
+
+Un interrupteur ou commutateur possède deux positions stables. Il conserve son état après l'action de l'opérateur.
+
+\paragraph{Exemple :} un sélecteur « Manuel / Automatique » qui reste dans la position choisie.
+
+\subsection{Les capteurs et détecteurs}
+
+\subsubsection{Fin de course}
+
+Un fin de course est un capteur mécanique qui détecte la position extrême d'un organe mobile.
+
+\paragraph{Exemple :} détection de la position d'un vérin complètement sorti.
+
+\subsubsection{Détecteur de proximité inductif}
+
+Il détecte la présence d'un objet métallique sans contact.
+
+\paragraph{Avantages :}
+\begin{itemize}
+    \item pas d'usure mécanique ;
+    \item cadence élevée ;
+    \item bonne répétabilité.
+\end{itemize}
+
+\subsubsection{Détecteur de proximité capacitif}
+
+Il détecte la présence d'objets conducteurs ou isolants (plastique, verre, liquide).
+
+\subsubsection{Détecteur photoélectrique}
+
+Il utilise un faisceau lumineux pour détecter un objet.
+
+Trois modes existent :
+
+\begin{itemize}
+    \item \textbf{barrage} : émetteur et récepteur séparés ;
+    \item \textbf{réflex} : émetteur et récepteur dans le même boîtier, avec réflecteur ;
+    \item \textbf{proximité} : l'objet renvoie lui-même le faisceau.
+\end{itemize}
+
+\subsubsection{Capteurs de grandeur physique}
+
+Ces capteurs délivrent un signal analogique ou numérique.
+
+\paragraph{Exemples :}
+\begin{itemize}
+    \item capteur de niveau (analogique ou TOR) ;
+    \item capteur de température (sonde PT100, thermocouple) ;
+    \item capteur de pression ;
+    \item codeur incrémental ou absolu.
+\end{itemize}
+
+\subsection{Caractéristiques d'un organe d'entrée}
+
+Pour choisir un organe d'entrée, on tient compte de :
+
+\begin{itemize}
+    \item la \textbf{nature de la grandeur} détectée (position, niveau, température) ;
+    \item le \textbf{type de signal} délivré (TOR, analogique, numérique) ;
+    \item la \textbf{tension d'alimentation} (24 V DC, 230 V AC) ;
+    \item la \textbf{distance de détection} ;
+    \item la \textbf{cadence} de fonctionnement ;
+    \item l'\textbf{environnement} (poussière, humidité, température) ;
+    \item le \textbf{type de sortie} (PNP, NPN, contact sec).
+\end{itemize}
+
+\subsection{Raccordement des organes d'entrée à l'API}
+
+Les organes d'entrée sont raccordés aux \textbf{modules d'entrées} de l'API.
+
+Chaque entrée possède :
+
+\begin{itemize}
+    \item une \textbf{adresse} (par exemple I0.0, I0.1, I0.2) ;
+    \item un \textbf{type} (TOR, analogique) ;
+    \item un \textbf{état logique} : 0 ou 1.
+\end{itemize}
+
+\paragraph{Exemple :}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|c|X|c|}
+\hline
+\textbf{Adresse} & \textbf{Organe} & \textbf{Type} \\
+\hline
+I0.0 & Bouton Marche & TOR \\
+\hline
+I0.1 & Bouton Arrêt & TOR \\
+\hline
+I0.2 & Capteur de niveau bas & TOR \\
+\hline
+I0.3 & Capteur de niveau haut & TOR \\
+\hline
+I0.4 & Fin de course vérin & TOR \\
+\hline
+\end{tabularx}
+\caption{Exemple de tableau des entrées}
+\end{table}
+
+\subsection{Exemple d'application : remplissage de cuve}
+
+Dans une cuve automatique :
+
+\begin{itemize}
+    \item \textbf{Bouton Marche} : entrée I0.0 ;
+    \item \textbf{Bouton Arrêt} : entrée I0.1 ;
+    \item \textbf{Capteur niveau bas} : entrée I0.2 ;
+    \item \textbf{Capteur niveau haut} : entrée I0.3.
+\end{itemize}
+
+L'API lit l'état de ces entrées à chaque cycle de scrutation et décide de l'ouverture ou de la fermeture de l'électrovanne.
+
+\subsection{Erreurs fréquentes à éviter}
+
+\begin{itemize}
+    \item Confondre contact NO et NC ;
+    \item Alimenter un capteur PNP comme un NPN ;
+    \item Dépasser la tension maximale d'entrée de l'API ;
+    \item Négliger la protection contre les surtensions ;
+    \item Mal repérer les adresses des entrées ;
+    \item Oublier de tester un capteur avant son raccordement.
+\end{itemize}
+
+\subsection{Conclusion}
+
+Les organes d'entrée sont indispensables au fonctionnement d'un système automatisé. Ils informent la partie commande de l'état du système et de son environnement.
+
+Leur choix dépend de la grandeur à détecter, du type de signal et des conditions d'utilisation. Un bon câblage et un repérage rigoureux sont essentiels pour éviter les erreurs de diagnostic.
+
+\subsubsection*{À retenir}
+
+\begin{quote}
+Les organes d'entrée transforment une information physique en un signal exploitable par l'API. Ils constituent le premier maillon de la chaîne d'information.
+\end{quote}
+
+\paragraph{Schéma fondamental :}
+
+\[
+\text{Organes d'entrée} \rightarrow \text{API} \rightarrow \text{Organes de sortie}
+\]
+
+\[
+\text{Capteurs, boutons, détecteurs} \rightarrow \text{Entrées API}
+\]

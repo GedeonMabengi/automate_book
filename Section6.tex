@@ -1,0 +1,261 @@
+% =========================================================
+\section{Chaîne d'information et chaîne d'énergie}
+
+\subsection{Introduction}
+
+Pour fonctionner, un système automatisé a besoin de deux choses essentielles :
+
+\begin{itemize}
+    \item des \textbf{informations}, pour savoir ce qui se passe et décider quoi faire ;
+    \item de l'\textbf{énergie}, pour agir physiquement sur la matière d'œuvre.
+\end{itemize}
+
+Ces deux besoins correspondent à deux chaînes fonctionnelles complémentaires :
+
+\begin{itemize}
+    \item la \textbf{chaîne d'information} ;
+    \item la \textbf{chaîne d'énergie}.
+\end{itemize}
+
+Comprendre ces deux chaînes permet de savoir où circule l'information et où circule l'énergie dans une installation automatisée.
+
+\subsection{La chaîne d'information}
+
+\subsubsection{Définition}
+
+La chaîne d'information regroupe l'ensemble des éléments qui permettent d'\textbf{acquérir}, de \textbf{traiter} et de \textbf{communiquer} des informations dans un système automatisé.
+
+Elle ne transporte pas d'énergie de puissance : elle transporte des \textbf{signaux}.
+
+\subsubsection{Fonctions de la chaîne d'information}
+
+La chaîne d'information assure trois fonctions principales :
+
+\begin{itemize}
+    \item \textbf{Acquérir} : recueillir les informations provenant des capteurs, boutons, détecteurs ;
+    \item \textbf{Traiter} : analyser ces informations selon la logique du programme ;
+    \item \textbf{Communiquer} : transmettre les informations vers les interfaces, l'IHM ou d'autres automates.
+\end{itemize}
+
+\subsubsection{Éléments de la chaîne d'information}
+
+On retrouve notamment :
+
+\begin{itemize}
+    \item les \textbf{capteurs} (fins de course, détecteurs de proximité, capteurs de niveau, etc.) ;
+    \item les \textbf{boutons-poussoirs} et \textbf{interrupteurs} ;
+    \item l'\textbf{automate programmable industriel (API)} ;
+    \item les \textbf{interfaces de communication} (réseaux, bus de terrain) ;
+    \item l'\textbf{IHM} (Interface Homme-Machine).
+\end{itemize}
+
+\paragraph{Exemple :} un capteur de niveau envoie une information à l'API. L'API la traite et affiche l'état sur une IHM.
+
+\subsection{La chaîne d'énergie}
+
+\subsubsection{Définition}
+
+La chaîne d'énergie regroupe l'ensemble des éléments qui permettent d'\textbf{alimenter}, de \textbf{distribuer}, de \textbf{convertir} et de \textbf{transmettre} l'énergie nécessaire aux actionneurs.
+
+Elle transporte de l'\textbf{énergie de puissance}.
+
+\subsubsection{Fonctions de la chaîne d'énergie}
+
+La chaîne d'énergie assure quatre fonctions principales :
+
+\begin{itemize}
+    \item \textbf{Alimenter} : fournir l'énergie au système (réseau électrique, air comprimé, hydraulique) ;
+    \item \textbf{Distribuer} : diriger l'énergie vers les actionneurs (contacteurs, disjoncteurs, distributeurs) ;
+    \item \textbf{Convertir} : transformer l'énergie en travail mécanique (moteurs, vérins) ;
+    \item \textbf{Transmettre} : transmettre le mouvement à l'effecteur (arbres, courroies, engrenages).
+\end{itemize}
+
+\subsubsection{Éléments de la chaîne d'énergie}
+
+On retrouve notamment :
+
+\begin{itemize}
+    \item l'\textbf{alimentation} électrique ou pneumatique ;
+    \item les \textbf{contacteurs} et \textbf{disjoncteurs} ;
+    \item les \textbf{moteurs} électriques ;
+    \item les \textbf{vérins} pneumatiques ou hydrauliques ;
+    \item les \textbf{transmissions mécaniques}.
+\end{itemize}
+
+\paragraph{Exemple :} le réseau électrique alimente un contacteur qui alimente un moteur. Le moteur convertit l'énergie électrique en énergie mécanique pour entraîner le convoyeur.
+
+\subsection{Comparaison entre les deux chaînes}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{Chaîne d'information} & \textbf{Chaîne d'énergie} \\
+\hline
+Transporte des \textbf{signaux} & Transporte de l'\textbf{énergie} \\
+\hline
+Faible puissance & Puissance importante \\
+\hline
+Capteurs, API, IHM & Alimentation, contacteurs, moteurs \\
+\hline
+Acquérir, traiter, communiquer & Alimenter, distribuer, convertir, transmettre \\
+\hline
+\end{tabularx}
+\caption{Comparaison entre chaîne d'information et chaîne d'énergie}
+\end{table}
+
+\subsection{Relation entre les deux chaînes}
+
+Les deux chaînes ne fonctionnent pas séparément : elles sont \textbf{reliées} par la partie commande.
+
+La chaîne d'information :
+
+\begin{itemize}
+    \item reçoit les informations des capteurs ;
+    \item les traite dans l'API ;
+    \item élabore les ordres.
+\end{itemize}
+
+La chaîne d'énergie :
+
+\begin{itemize}
+    \item reçoit les ordres de la partie commande ;
+    \item distribue l'énergie vers les actionneurs ;
+    \item réalise l'action sur la matière d'œuvre.
+\end{itemize}
+
+On peut représenter cette relation par :
+
+\[
+\text{Capteurs} \rightarrow \text{Chaîne d'information} \rightarrow \text{Ordres}
+\]
+
+\[
+\text{Ordres} \rightarrow \text{Chaîne d'énergie} \rightarrow \text{Actionneurs} \rightarrow \text{Action}
+\]
+
+\subsection{Représentation graphique}
+
+Une représentation classique d'un système automatisé sous forme de deux chaînes est la suivante :
+
+\[
+\begin{array}{ccccccc}
+\text{Acquérir} & \rightarrow & \text{Traiter} & \rightarrow & \text{Communiquer} & & \\
+\text{(Capteurs)} & & \text{(API)} & & \text{(IHM, réseau)} & & \\
+& & \downarrow & & & & \\
+& & \text{Ordres} & & & & \\
+& & \downarrow & & & & \\
+\text{Alimenter} & \rightarrow & \text{Distribuer} & \rightarrow & \text{Convertir} & \rightarrow & \text{Transmettre} \\
+\text{(Réseau)} & & \text{(Contacteurs)} & & \text{(Moteurs)} & & \text{(Mécanique)}
+\end{array}
+\]
+
+\subsection{Exemple : réservoir d'eau}
+
+Reprenons l'exemple du réservoir d'eau.
+
+\paragraph{Chaîne d'information :}
+\begin{itemize}
+    \item capteur de niveau bas ;
+    \item capteur de niveau haut ;
+    \item API.
+\end{itemize}
+
+\paragraph{Chaîne d'énergie :}
+\begin{itemize}
+    \item réseau électrique ;
+    \item contacteur ;
+    \item pompe électrique ;
+    \item tuyauterie.
+\end{itemize}
+
+\paragraph{Fonctionnement :}
+
+\[
+\text{Niveau bas} \rightarrow \text{Capteur} \rightarrow \text{API} \rightarrow \text{Contacteur} \rightarrow \text{Pompe}
+\]
+
+\[
+\text{Niveau haut} \rightarrow \text{Capteur} \rightarrow \text{API} \rightarrow \text{Contacteur} \rightarrow \text{Arrêt pompe}
+\]
+
+\subsection{Exemple : convoyeur}
+
+\paragraph{Chaîne d'information :}
+\begin{itemize}
+    \item capteur de présence de carton ;
+    \item API ;
+    \item IHM.
+\end{itemize}
+
+\paragraph{Chaîne d'énergie :}
+\begin{itemize}
+    \item réseau électrique ;
+    \item contacteur ;
+    \item moteur ;
+    \item tapis du convoyeur.
+\end{itemize}
+
+\paragraph{Fonctionnement :}
+
+\[
+\text{Carton détecté} \rightarrow \text{API} \rightarrow \text{Contacteur} \rightarrow \text{Moteur} \rightarrow \text{Convoyeur avance}
+\]
+
+\subsection{Exemple : porte automatique}
+
+\paragraph{Chaîne d'information :}
+\begin{itemize}
+    \item capteur de présence ;
+    \item API.
+\end{itemize}
+
+\paragraph{Chaîne d'énergie :}
+\begin{itemize}
+    \item réseau électrique ;
+    \item variateur ou contacteur ;
+    \item moteur ;
+    \item mécanisme de la porte.
+\end{itemize}
+
+\paragraph{Fonctionnement :}
+
+\[
+\text{Personne détectée} \rightarrow \text{API} \rightarrow \text{Moteur} \rightarrow \text{Porte s'ouvre}
+\]
+
+\subsection{Importance de cette distinction}
+
+Distinguer la chaîne d'information de la chaîne d'énergie permet :
+
+\begin{itemize}
+    \item de comprendre le rôle de chaque composant ;
+    \item de localiser une panne plus facilement ;
+    \item de choisir correctement les capteurs et les actionneurs ;
+    \item de dimensionner les câbles et les protections ;
+    \item de respecter les règles de sécurité.
+\end{itemize}
+
+\paragraph{Attention :} dans un schéma, on ne mélange pas les deux chaînes. Les capteurs et l'API appartiennent à la chaîne d'information ; les contacteurs, moteurs et vérins appartiennent à la chaîne d'énergie.
+
+\subsection{Conclusion}
+
+Tout système automatisé comporte deux chaînes complémentaires : la chaîne d'information, qui transporte les signaux, et la chaîne d'énergie, qui transporte la puissance.
+
+La partie commande fait le lien entre les deux : elle reçoit les informations de la chaîne d'information et envoie les ordres à la chaîne d'énergie.
+
+\subsubsection*{À retenir}
+
+\begin{quote}
+La chaîne d'information acquiert, traite et communique les signaux. La chaîne d'énergie alimente, distribue, convertit et transmet l'énergie. La partie commande relie ces deux chaînes.
+\end{quote}
+
+\paragraph{Schéma fondamental :}
+
+\[
+\text{Capteurs} \rightarrow \text{Chaîne d'information} \rightarrow \text{Ordres}
+\]
+
+\[
+\text{Ordres} \rightarrow \text{Chaîne d'énergie} \rightarrow \text{Actionneurs} \rightarrow \text{Matière d'œuvre}
+\]
